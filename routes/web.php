@@ -9,5 +9,4 @@ Route::get('/', function () {
 
 Route::get('/', [ScanController::class, 'qr']);
 Route::get('/scan', [ScanController::class, 'index']);
-Route::post('/scan/verify', [ScanController::class, 'verify'])
-    ->middleware('throttle:5,1');
+Route::post('/scan/verify', [ScanController::class, 'verify'])->middleware('throttle:5,1');
